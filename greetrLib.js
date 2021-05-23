@@ -6,15 +6,17 @@
         return new Greetr.Init(name, sirname, language);
     }
 
-            // Function constructor
-            Greetr.Init = function(name = "", sirname = "", language = "en"){
-                this.name = name;
-                this.sirname = sirname;
-                this.language = language;
-        
-                if(!isLanguageSupported(language)) return `${language} not supported`; 
-            }
 
+    // Function constructor
+    Greetr.Init = function(name = "", sirname = "", language = "en"){
+        this.name = name;
+        this.sirname = sirname;
+        this.language = language;
+        
+        if(!isLanguageSupported(language)) return `${language} not supported`; 
+    }
+
+    
     // hidden within the scope of the IIFE and never directly accessible
     const supportedLanguages = ["en", "es", "hr", "sk"];
     
